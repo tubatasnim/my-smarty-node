@@ -19,7 +19,9 @@ const users = [
     { id: 6, name: "sucorita", email: "sucorita@gmail.com", phone: '01788888889' },
     { id: 7, name: "bobita", email: "bobita@gmail.com", phone: '01788888588' }
 ]
-
+// app.get('/users',(req,res)=>{
+//     res.send()
+// })
 app.get('/users', (req, res) => {
     //filter by search query parameters
     if (req.query.name) {
@@ -46,12 +48,12 @@ app.post('/user', (req, res) => {
     users.push(user);
     res.send(user);
 })
-app.get('/fruits', (req, res) => {
-    res.send(['mango', 'apple', 'orange']);
-});
-app.get('/fruits/mango/fazle', (req, res) => {
-    res.send('sour sour fazle flavor')
-});
+// app.get('/fruits', (req, res) => {
+//     res.send(['mango', 'apple', 'orange']);
+// });
+// app.get('/fruits/mango/fazle', (req, res) => {
+//     res.send('sour sour fazle flavor')
+// });
 app.listen(port, () => {
     console.log('listening to port', port)
 })
